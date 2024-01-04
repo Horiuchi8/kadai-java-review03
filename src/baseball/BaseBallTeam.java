@@ -11,7 +11,6 @@ public class BaseBallTeam {
     private int win;
     private int lose;
     private int draw;
-    private double winPercentage;
 
     public String getName() {
         return name;
@@ -45,15 +44,6 @@ public class BaseBallTeam {
         this.draw = draw;
     }
 
-    public double getWinPercentage() {
-        return winPercentage;
-    }
-
-    public void setWinPercentage(double winPercentage) {
-        this.winPercentage = winPercentage;
-    }
-
-
     //引数なしのコンストラクタの生成
     public BaseBallTeam() {
     }
@@ -67,14 +57,15 @@ public class BaseBallTeam {
     }
 
     //勝率計算メソッド
-    public double winPercentage() {
+    public double getRate() {
         return (double) win / (win + lose);
     }
 
     //reportメソッド
     public void report() {
-        this.winPercentage = (double)win/(win+lose);
-        System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分" + "勝率は" + winPercentage + "です。");
+
+        double getRate = 0;
+        System.out.println(name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分" + "勝率は" + getRate + "です。");
 
     }
 }
